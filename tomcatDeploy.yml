@@ -16,7 +16,7 @@
     ansible.builtin.get_url:
     
      
-      url: http://dhareppa.jfrog.io/artifactory/generic/webapp-{{ build_number }}.war
+      url: https://dhareppa.jfrog.io/artifactory/generic/webapp-{{ build_number }}.war
       dest: /home/tomcat/sourcefile/webapp.war
       username: dhareppab@gmail.com
       password: Dh@reppa@1234
