@@ -16,7 +16,7 @@
     ansible.builtin.get_url:
     
      
-      url: https://dhareppa.jfrog.io/artifactory/generic/webapp-{{ build_number }}.war
+      url: https://dhareppa.jfrog.io/artifactory/generic/webapp-35.war
       dest: /home/tomcat/sourcefile/webapp.war
       username: dhareppab@gmail.com
       password: Dh@reppa@1234
@@ -27,11 +27,11 @@
       state: directory
       mode: 0777
 
-   - name: backup file with owner and permissions
-     copy:
-       src: /opt/tomcat/webapps/webapp.war
-       dest: /home/tomcat/backup/webapp.war
-       remote_src: yes
+   # - name: backup file with owner and permissions
+   #   copy:
+   #     src: /opt/tomcat/webapps/webapp.war
+   #     dest: /home/tomcat/backup/webapp.war
+   #     remote_src: yes
 
   - name: Delete remote war file
     file:
