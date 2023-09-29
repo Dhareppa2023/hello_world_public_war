@@ -1,0 +1,7 @@
+---
+name: This Play Creates Test Directory In /tmp 
+hosts: 3.95.237.114
+tasks:
+name: create a directory named test file:
+path: /tmp/test 
+state: directory
