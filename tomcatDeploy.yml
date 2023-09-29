@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   vars:
-    build_number: "{{ BUILD_NUMBER }}"
+    build_number: '{{ BUILD_NUMBER }}'
   #become_user: tomcat
   tasks:
 
@@ -14,24 +14,22 @@
 
   - name: download war file
     ansible.builtin.get_url:
-    
-     
       url: https://dhareppa.jfrog.io/artifactory/generic/webapp-{{ build_number }}.war
       dest: /home/tomcat/sourcefile/webapp.war
-      username: dhareppab@gmail.com
+      username: dhareppa2023@gmail.com
       password: Dh@reppa@1234
 
-   - name: create directory with a date in name
-     file: 
-       path: /home/tomcat/backup
-       state: directory
-       mode: 0777
+  - name: create directory with a date in name
+    file: 
+      path: /home/tomcat/backup
+      state: directory
+      mode: 0777
 
-    # - name: backup file with owner and permissions
-    #   copy:
-    #     src: /opt/tomcat/webapps/webapp.war
-    #     dest: /home/tomcat/backup/webapp.war
-    #     remote_src: yes
+  # - name: backup file with owner and permissions
+  #   copy:
+  #     src: /opt/tomcat/webapps/webapp.war
+  #     dest: /home/tomcat/backup/webapp.war
+  #     remote_src: yes
 
   - name: Delete remote war file
     file:
