@@ -1,6 +1,7 @@
 ---
 - hosts: webservers
   become: yes
+  build_number: '{{ BUILD_NUMBER }}'
   #become_user: tomcat
   tasks:
 
