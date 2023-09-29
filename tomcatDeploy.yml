@@ -21,17 +21,17 @@
       username: dhareppab@gmail.com
       password: Dh@reppa@1234
 
-  - name: create directory with a date in name
-    file: 
-      path: /home/tomcat/backup
-      state: directory
-      mode: 0777
+  # - name: create directory with a date in name
+  #   file: 
+  #     path: /home/tomcat/backup
+  #     state: directory
+  #     mode: 0777
 
-   # - name: backup file with owner and permissions
-   #   copy:
-   #     src: /opt/tomcat/webapps/webapp.war
-   #     dest: /home/tomcat/backup/webapp.war
-   #     remote_src: yes
+    - name: backup file with owner and permissions
+      copy:
+        src: /opt/tomcat/webapps/webapp.war
+        dest: /home/tomcat/backup/webapp.war
+        remote_src: yes
 
   - name: Delete remote war file
     file:
