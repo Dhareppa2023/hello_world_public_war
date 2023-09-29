@@ -12,7 +12,9 @@
 
   - name: download war file
     ansible.builtin.get_url:
-      url: https://dhareppa.jfrog.io/artifactory/generic/webapp-32.war
+    
+      url: https://$artifactory/artifactory/generic/$project/' | grep -o 'webapp-[^"]*.tar.gz' | sort | tail -1)
+     # url: https://dhareppa.jfrog.io/artifactory/generic/webapp-32.war
       dest: /home/tomcat/sourcefile/webapp.war
       username: dhareppab@gmail.com
       password: Dh@reppa@1234
