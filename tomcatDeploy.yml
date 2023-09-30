@@ -3,7 +3,7 @@
   become: yes
   vars:
     build_number: '{{ BUILD_NUMBER }}'
-  #become_user: tomcat
+  become_user: jenkins
   tasks:
 
   - name: create directory 
