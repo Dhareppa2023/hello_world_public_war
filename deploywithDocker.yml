@@ -5,12 +5,12 @@
       shell: docker login -u dhareppa2023@gmail.com -p Dh@reppa@1234 dhareppa.jfrog.io     
     
     - name: pull an image
-      shell: docker pull dhareppa.jfrog.io/artifactory/mydocker/devops_practice:9
+      shell: docker pull dhareppa.jfrog.io/artifactory/mydocker/devops_practice:{{ BUILD_NUMBER }}
 
-    - name: remove container
-      shell: docker rm -f devopsAppDeploy
+    # - name: remove container
+    #   shell: docker rm -f devopsAppDeploy
         
     - name: create a application container
-      shell: docker run -id --name devopsAppDeploy -p 8111:8080 dhareppa.jfrog.io/artifactory/mydocker/devops_practice:9
+      shell: docker run -id --name devopsAppDeploy -p 8111:8080 dhareppa.jfrog.io/artifactory/mydocker/devops_practice:{{ BUILD_NUMBER }}
  
    
