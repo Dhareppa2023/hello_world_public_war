@@ -2,7 +2,7 @@
 - hosts: webservers
   become: yes
   vars:
-    build_number: '{{ BUILD_NUMBER }}'
+    BUILD_NUMBER: '{{ BUILD_NUMBER }}'
   # become_user: jenkins
   tasks:
 
