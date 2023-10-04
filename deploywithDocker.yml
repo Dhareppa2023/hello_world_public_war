@@ -1,10 +1,8 @@
 ---
 - hosts: webservers
   tasks:
-    - name:
-      shell: sudo chmod 777 /var/run/docker.sock
     - name: login to jfrog
-      shell: docker login -u dhareppa2023@gmail.com -p Dh@reppa@1234 dhareppa.jfrog.io
+      shell: docker login -u Dhareppa2023 -p Dh@reppa@1234 dhareppa.jfrog.io
     
     - name: pull an image
       shell: docker pull dhareppa.jfrog.io/artifactory/mydocker/devops_practice:{{ BUILD_NUMBER }}
