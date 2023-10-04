@@ -3,11 +3,11 @@
   become: yes
   tasks:
       
-    # - name: login to jfrog
-    #   shell: docker login -u dhareppa2023@gmail.com -p Dh@reppa@1234 dhareppa.jfrog.io    
+    - name: login to jfrog
+      shell: sudo docker login -u dhareppa2023@gmail.com -p Dh@reppa@1234 dhareppa.jfrog.io    
     
-    # - name: pull an image
-    #   shell: docker pull dhareppa.jfrog.io/mydocker/devops_practice:{{ BUILD_NUMBER }}
+    - name: pull an image
+      shell: sudo docker pull dhareppa.jfrog.io/mydocker/devops_practice:{{ BUILD_NUMBER }}
 
     - name: remove container
       shell: docker rm -f devopsAppDeploy
