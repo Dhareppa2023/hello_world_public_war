@@ -6,8 +6,8 @@
     # - name: login to jfrog
     #   shell: docker login -u dhareppa2023@gmail.com -p Dh@reppa@1234 dhareppa.jfrog.io    
     
-    - name: pull an image
-      shell: docker pull dhareppa.jfrog.io/mydocker/devops_practice:{{ BUILD_NUMBER }}
+    # - name: pull an image
+    #   shell: docker pull dhareppa.jfrog.io/mydocker/devops_practice:{{ BUILD_NUMBER }}
 
     - name: remove container
       shell: docker rm -f devopsAppDeploy
