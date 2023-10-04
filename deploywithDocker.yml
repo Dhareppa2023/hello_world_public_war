@@ -11,6 +11,6 @@
     #   shell: docker rm -f devopsAppDeploy
         
     - name: create a application container
-      shell: docker run -itd --name devopsAppDeploy -- /bin/bash -p 8111:8080 dhareppa.jfrog.io/artifactory/mydocker/devops_practice:{{ BUILD_NUMBER }}
+      shell: docker run -itd --name devopsAppDeploy -- /bin/sh -p 8111:8080 dhareppa.jfrog.io/artifactory/mydocker/devops_practice:{{ BUILD_NUMBER }}
  
    
