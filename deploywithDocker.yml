@@ -7,10 +7,10 @@
     - name: pull an image
       shell: docker pull dhareppa.jfrog.io/artifactory/mydocker/devops_practice:{{ BUILD_NUMBER }}
 
-    # - name: remove container
-    #   shell: docker rm -f devopsAppDeploy
+    - name: remove container
+      shell: docker rm -f devopsAppDeploy
         
     - name: create a application container
-      shell: docker run -id --name devopsAppDeploy -p 8111:8080 -u ubuntu dhareppa.jfrog.io/artifactory/mydocker/devops_practice:{{ BUILD_NUMBER }} 
+      shell: docker run -id --name devopsAppDeploy -p 8111:8080 -u ubuntu dhareppa.jfrog.io/mydocker/devops_practice:{{ BUILD_NUMBER }} 
  
    
