@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: devopsapp
-        image: dhareppa2023@gmail.com/devops_practice_81
+        image: dhareppa.jfrog.io/docker-test/app-a/hello_world_public_war:81
         ports:
         - containerPort: 8080
