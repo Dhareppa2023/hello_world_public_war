@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: devopsapp
-        image: siddeshg672/devopsapp:test-deploy_52
+        image: dhareppa2023/devopsapp:test-deploy_52
         ports:
         - containerPort: 8080
