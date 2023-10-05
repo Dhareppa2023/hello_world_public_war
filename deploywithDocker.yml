@@ -3,8 +3,6 @@
   become: yes
   tasks:
   
-    - name: change permission
-      shell: sudo chmod 777 /var/run/docker.sock
     - name: login to jfrog
       shell: docker login -u dhareppa2023@gmail.com -p Dh@reppa@1234 dhareppa.jfrog.io    
     
